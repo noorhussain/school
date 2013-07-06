@@ -1,0 +1,44 @@
+<html>
+<head>
+
+<title>Staff</title>
+<style>
+p{
+font-size:18px;
+margin:10px;
+color:green;
+}
+pp
+{
+font-size:18px;
+margin:5px;
+}
+</style>
+<body bgcolor='cyan'>
+{% if s %}
+ <p><u>Staff Details:</u> </p> 
+<table><tr><th><i>Staff name</i></th><th> </th></tr>  
+{% for i in s %}
+ <tr>
+<td align='left'><a href='/showst/{{i.id}}/'> {{i.staff_name}} </a></td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+           
+<td><a href='/deletest/{{i.id}}/' id='{{i.id}}' class='delete_button'>Delete</a></td><tr>
+ 
+<br>{%endfor%}
+{% else %}
+     
+
+<p>one staff Details deleted</p>
+{%endif%}</table><br>
+
+<pp><a href='/addst/'> Add new Staff</a>
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href='/staff/'>Staff</a></pp>
+</html>

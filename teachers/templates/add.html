@@ -1,0 +1,18 @@
+<html>
+<head>
+
+<title>Add a teacher</title><b>Add new Teacher </b>
+
+</head>
+<body bgcolor='cyan'>
+
+<form name='input' action='/add/' method="post">
+
+{%csrf_token%}
+{{form.as_p}}
+<input type="submit" value="Add Teacher">
+
+</form>
+</body>
+</html>
+

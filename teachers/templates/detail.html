@@ -1,0 +1,43 @@
+<html>
+<head>
+
+<title>Teachers</title>
+<style>
+p{
+font-size:18px;
+margin:10px;
+color:green;
+}
+pp
+{
+font-size:18px;
+margin:5px;
+}
+</style>
+<body bgcolor='cyan'>
+{% if s %}
+ <p><u>Teacher Details:</u> </p> 
+<table><tr><th><i>Teacher name</i></th><th> </th></tr>  
+{% for i in s %}
+ <tr>
+<td align='left'><a href='/show/{{i.id}}/'> {{i.faculty_name}} </a></td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+           
+<td><a href='/delete/{{i.id}}/' id='{{i.id}}' class='delete_button'>Delete</a></td><tr>
+ 
+<br>{%endfor%}
+{% else %}
+     
+
+<p>Teacher Details deleted</p>
+{%endif%}</table><br>
+
+<pp><a href='/add/'> Add new Teacher</a>
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href='/teachers/'>Teachers</a></pp>
